@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+    CS5610
+    HTML + CSS Self Assessment
+    Summer 2026
+    Wu-Hung Hsiao
+-->
+<html lang="en">
+
+<head>
+    <!-- Step 1: Set up the page basic info -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS5610 HTML and CSS Self Assessment by Wu-Hung Hsiao">
+    <title>CS5610 - HTML/CSS Self Assessment</title>
+
+    <!-- Step 2: Write the CSS styles -->
+    <style>
+
+        /* Basic body style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 60px; /* space for the fixed footer */
+        }
+
+        /* Navbar at the top */
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+        }
+
+        /* Main content area */
+        main {
+            padding: 20px;
+        }
+
+        /* Each section has a line at the bottom */
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        /* ----- Section 3: Grid styles ----- */
+
+        /* Each row of 3 cells */
+        .grid-row {
+            display: block;
+        }
+
+        /* Each cell in the grid */
+        .grid-cell {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            border: 1px solid black;
+            background-color: lightblue;
+            margin: 3px;
+        }
+
+        /* ----- Section 4: Box Model styles ----- */
+
+        /* Shared box style */
+        .box {
+            display: inline-block;
+            background-color: #e0e0e0;
+            width: 120px;
+            text-align: center;
+            margin-right: 10px;
+            vertical-align: top;
+            padding: 5px;
+        }
+
+        /* Row 1: border size changes */
+        .border-0  { border: 0px solid black; }
+        .border-5  { border: 5px solid black; }
+        .border-10 { border: 10px solid black; }
+
+        /* Row 2: margin size changes */
+        .margin-0  { margin: 0px;  border: 1px solid red; }
+        .margin-5  { margin: 5px;  border: 1px solid red; }
+        .margin-10 { margin: 10px; border: 1px solid red; }
+
+        /* Row 3: padding size changes */
+        .padding-0  { padding: 0px;  border: 1px solid blue; }
+        .padding-5  { padding: 5px;  border: 1px solid blue; }
+        .padding-10 { padding: 10px; border: 1px solid blue; }
+
+        /* ----- Section 6: Positioning styles ----- */
+
+        /* Container box for demo */
+        .pos-demo {
+            position: relative;
+            border: 2px dashed gray;
+            background-color: #f9f9f9;
+            height: 160px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* static box */
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 5px;
+            width: 200px;
+        }
+
+        /* relative box - moved from its normal spot */
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: lightgreen;
+            padding: 5px;
+            width: 250px;
+        }
+
+        /* absolute box - placed inside parent */
+        .absolute-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: orange;
+            padding: 5px;
+        }
+
+        /* scroll box for sticky demo */
+        .scroll-box {
+            height: 120px;
+            overflow-y: scroll;
+            border: 1px solid gray;
+        }
+
+        /* sticky bar */
+        .sticky-bar {
+            position: sticky;
+            top: 0;
+            background-color: salmon;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        /* Fixed footer - always stays at the bottom */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Step 3: Build the navbar -->
+    <nav>
+        <h1>My Web Dev Self Assessment - CS5610</h1>
+    </nav>
+
+    <!-- Step 4: Build the main content -->
+    <main>
+
+        <h2>HTML + CSS Self Assessment</h2>
+
+        <!-- ============================
+             Section 1: 10 HTML Tags
+             ============================ -->
+        <section>
+            <h3>Section 1: 10 Useful HTML Tags</h3>
+            <p>Here are 10 HTML tags that I think are the most useful:</p>
+            <ul>
+                <li><b>&lt;div&gt;</b> - A box that groups elements together. I use it a lot for layout.</li>
+                <li><b>&lt;span&gt;</b> - Like div but stays inline. Good for styling part of a sentence.</li>
+                <li><b>&lt;p&gt;</b> - For writing paragraphs of text.</li>
+                <li><b>&lt;a&gt;</b> - Creates a link. You need href to set where it goes.</li>
+                <li><b>&lt;img&gt;</b> - Shows an image. You set the file path in src.</li>
+                <li><b>&lt;h1&gt; to &lt;h6&gt;</b> - Headings. h1 is the biggest, h6 is the smallest.</li>
+                <li><b>&lt;ul&gt; and &lt;li&gt;</b> - Makes a bullet list. ul is the list, li is each item.</li>
+                <li><b>&lt;input&gt;</b> - A field where users can type something, like a form.</li>
+                <li><b>&lt;button&gt;</b> - A clickable button, usually used with JavaScript.</li>
+                <li><b>&lt;form&gt;</b> - Groups input fields so users can submit data.</li>
+            </ul>
+        </section>
+
+        <!-- ============================
+             Section 2: SEO Tags
+             ============================ -->
+        <section>
+            <h3>Section 2: Important Tags for SEO</h3>
+            <p>I looked up which tags help with SEO (how Google finds your site). Here are the ones I found:</p>
+            <ul>
+                <li><b>&lt;title&gt;</b> - The page title that shows up in Google results. This is the most important one.</li>
+                <li><b>&lt;meta name="description"&gt;</b> - A short description shown under the title on Google.</li>
+                <li><b>&lt;meta name="keywords"&gt;</b> - Keywords that describe what the page is about.</li>
+                <li><b>&lt;meta name="robots"&gt;</b> - Tells Google whether it should index this page or not.</li>
+                <li><b>&lt;meta name="viewport"&gt;</b> - Makes the site look good on phones. Google cares about this.</li>
+                <li><b>&lt;h1&gt;</b> - The main title of the page. Google reads this to understand what the page is about.</li>
+                <li><b>&lt;h2&gt; to &lt;h6&gt;</b> - Sub headings help organize the page. Google uses them too.</li>
+                <li><b>&lt;a href="..."&gt;</b> - Links to other pages help Google find more content on your site.</li>
+                <li><b>&lt;img alt="..."&gt;</b> - The alt text explains what the image is. This helps with image search.</li>
+                <li><b>&lt;link rel="stylesheet"&gt;</b> - Linking an external CSS file keeps HTML small, which helps load speed.</li>
+            </ul>
+        </section>
+
+        <!-- ============================
+             Section 3: 3x3 Grid
+             (Only divs and spans, no table)
+             ============================ -->
+        <section>
+            <h3>Section 3: 3x3 Grid</h3>
+            <p>I made this grid using only div and span with display: inline-block. No table or CSS grid used.</p>
+
+            <div>
+                <!-- Row 1 -->
+                <div class="grid-row">
+                    <span class="grid-cell">1</span>
+                    <span class="grid-cell">2</span>
+                    <span class="grid-cell">3</span>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="grid-row">
+                    <span class="grid-cell">4</span>
+                    <span class="grid-cell">5</span>
+                    <span class="grid-cell">6</span>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="grid-row">
+                    <span class="grid-cell">7</span>
+                    <span class="grid-cell">8</span>
+                    <span class="grid-cell">9</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================
+             Section 4: Box Model Gallery
+             ============================ -->
+        <section>
+            <h3>Section 4: CSS Box Model - Border, Margin, Padding</h3>
+            <p>Each row shows one property (border, margin, or padding) with 3 different values: 0px, 5px, 10px.</p>
+
+            <!-- Row 1: Border -->
+            <p><b>Border (0px / 5px / 10px):</b></p>
+            <div>
+                <div class="box border-0">border: 0px</div>
+                <div class="box border-5">border: 5px</div>
+                <div class="box border-10">border: 10px</div>
+            </div>
+
+            <br>
+
+            <!-- Row 2: Margin -->
+            <p><b>Margin (0px / 5px / 10px):</b></p>
+            <div>
+                <div class="box margin-0">margin: 0px</div>
+                <div class="box margin-5">margin: 5px</div>
+                <div class="box margin-10">margin: 10px</div>
+            </div>
+
+            <br>
+
+            <!-- Row 3: Padding -->
+            <p><b>Padding (0px / 5px / 10px):</b></p>
+            <div>
+                <div class="box padding-0">padding: 0px</div>
+                <div class="box padding-5">padding: 5px</div>
+                <div class="box padding-10">padding: 10px</div>
+            </div>
+        </section>
+
+        <!-- ============================
+             Section 5: Font Sizes (inline styling)
+             ============================ -->
+        <section>
+            <h3>Section 5: Font Sizes - Absolute and Relative</h3>
+            <p>Same sentence shown 6 times with different font sizes using inline styling.</p>
+            <ul>
+                <!-- Absolute units: px - fixed size, doesn't change -->
+                <li style="font-size: 10px;">
+                    10px (absolute) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Absolute: always exactly 10px no matter what.</span>
+                </li>
+                <li style="font-size: 20px;">
+                    20px (absolute) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Absolute: always exactly 20px. Bigger than 10px.</span>
+                </li>
+
+                <!-- Relative units: rem - based on root element size (usually 16px) -->
+                <li style="font-size: 0.8rem;">
+                    0.8rem (relative) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Relative: 0.8 x 16px = about 12.8px. Changes if the user changes their browser font size.</span>
+                </li>
+                <li style="font-size: 1.2rem;">
+                    1.2rem (relative) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Relative: 1.2 x 16px = about 19.2px. rem is based on the html element font size.</span>
+                </li>
+
+                <!-- Relative units: em - based on parent element size -->
+                <li style="font-size: 1em;">
+                    1em (relative) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Relative: 1em = the parent font size. If parent is 16px, then this is 16px.</span>
+                </li>
+
+                <!-- Relative units: % - percentage of parent size -->
+                <li style="font-size: 150%;">
+                    150% (relative) - "Hello, I am learning HTML."
+                    <span style="color: gray; font-size: 13px;"> - Relative: 150% of the parent font size. Similar to em but written as a percent.</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============================
+             Section 6: CSS Positioning
+             (4 types + footer uses fixed)
+             ============================ -->
+        <section>
+            <h3>Section 6: CSS Positioning</h3>
+            <p>There are 4 positioning options in CSS. The footer at the bottom of this page uses position: fixed.</p>
+
+            <!-- 1. static -->
+            <p><b>1. position: static</b> - This is the default. The element just sits in normal order on the page. You cannot move it with top/left/bottom/right.</p>
+            <div class="pos-demo">
+                <div class="static-box">I am static - just sitting in normal flow.</div>
+            </div>
+
+            <!-- 2. relative -->
+            <p><b>2. position: relative</b> - Moves the element from where it normally would be. I set top: 20px and left: 30px to shift it. Use this when you want to nudge something without affecting other elements.</p>
+            <div class="pos-demo">
+                <div class="relative-box">I am relative - moved 20px down and 30px right from my original spot.</div>
+            </div>
+
+            <!-- 3. absolute -->
+            <p><b>3. position: absolute</b> - Pulls the element out of the normal flow and places it relative to its parent. I set it to top: 10px right: 10px so it goes to the top right corner. Use this for things like badges or popups inside a container.</p>
+            <div class="pos-demo">
+                <p>This is the parent container (position: relative).</p>
+                <div class="absolute-box">I am absolute - pinned to top right of my parent.</div>
+            </div>
+
+            <!-- 4. sticky -->
+            <p><b>4. position: sticky</b> - Works like relative at first, but sticks to the top when you scroll past it. Good for headers that should stay visible. Scroll in the box below to see it work.</p>
+            <div class="scroll-box">
+                <div class="sticky-bar">I am sticky - scroll down inside this box!</div>
+                <p style="padding: 5px;">Content line 1</p>
+                <p style="padding: 5px;">Content line 2</p>
+                <p style="padding: 5px;">Content line 3</p>
+                <p style="padding: 5px;">Content line 4</p>
+                <p style="padding: 5px;">Content line 5</p>
+                <p style="padding: 5px;">Content line 6</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Step 5: Footer using position fixed -->
+    <!-- position: fixed makes this stay at the bottom of the screen even when scrolling -->
+    <footer>
+        <p>&copy; 2026 Summer CS5610 Wu-Hung Hsiao</p>
+    </footer>
+
+</body>
+
+</html>
