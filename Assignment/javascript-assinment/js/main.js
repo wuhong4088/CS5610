@@ -15,6 +15,7 @@ function MainModule(listingsID = "#listings") {
   <div class="listing card">
     <img
       src="${listing.picture_url}"
+      onerror="this.src='https://placehold.co/400x200?text=No+Image'"
       class="card-img-top"
       alt="AirBNB Listing"
     />
