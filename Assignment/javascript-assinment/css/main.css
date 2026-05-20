@@ -1,0 +1,13 @@
+/*
+    CS5610
+    Javascript and DOM Self Assessment - main.css
+    Summer 2026
+    Wu-Hung Hsiao
+*/
+
+/* Make listing images all the same size */
+.listing img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
